@@ -1,3 +1,6 @@
+Make sure you delete the _resource.lua before you start the resource.
+
+
 # esx_handcuffs
 ## Exemplo de implementação (esx_policejob)
 
