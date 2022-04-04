@@ -1,1 +1,1 @@
-INSERT INTO `items` (`id`, `name`, `label`, `limit`, `rare`, `can_remove`) VALUES (NULL, 'handcuffs', 'algemas', -1, 0, 1);
+INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES ('handcuffs', 'handcuffs', 1, 0, 1);
