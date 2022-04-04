@@ -1,5 +1,4 @@
--- ESX
-ESX               = nil
+ESX = nil
 
 Citizen.CreateThread(function()
 	while ESX == nil do
@@ -82,12 +81,12 @@ AddEventHandler('esx_handcuffs:cuffcheck', function()
   if distance ~= -1 and distance <= 3.0 then
   				RequestAnimDict("amb@prop_human_bum_bin@idle_b")
 				  TaskPlayAnim(ped,"amb@prop_human_bum_bin@idle_b","idle_d",100.0, 200.0, 0.3, 120, 0.2, 0, 0, 0, 130)
-								ESX.ShowNotification('~g~Você usou suas algemas')
+								ESX.ShowNotification('~g~You used your handcuffs')
 				Wait(8000)
 		TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(player))
-				ESX.ShowNotification('~r~Pessoa Algemada/Desalgemada')
+				ESX.ShowNotification('~r~Person Handcuffed/Uncuffed')
   else
-    ESX.ShowNotification('Nenhum jogador por perto')
+    ESX.ShowNotification('No players around')
 	end
 end)
 
@@ -97,7 +96,7 @@ AddEventHandler('esx_handcuffs:nyckelcheck', function()
   if distance ~= -1 and distance <= 3.0 then
       TriggerServerEvent('esx_handcuffs:unlocking', GetPlayerServerId(player))
   else
-    ESX.ShowNotification('Nenhum jogador por perto')
+    ESX.ShowNotification('No players around')
 	end
 end)
 
@@ -125,9 +124,9 @@ AddEventHandler('esx_handcuffs:unlockingcuffs', function()
 		ClearPedTasksImmediately(ped)
 
 		TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(player))
-		ESX.ShowNotification('Algemas desbloqueadas')
+		ESX.ShowNotification('Handcuffs unlocked')
 	else
-		ESX.ShowNotification('Você já está usando as algemas')
+		ESX.ShowNotification('You are already using the handcuffs')
 	end
 end)
 

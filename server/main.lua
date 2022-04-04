@@ -1,4 +1,4 @@
-ESX               = nil
+ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
@@ -17,7 +17,6 @@ end)
 ----
 ESX.RegisterUsableItem('key', function(source)
 	local xPlayer = ESX.GetPlayerFromId(source)
-	xPlayer.removeInventoryItem('key', 1)
 
 	TriggerClientEvent('esx_handcuffs:unlockingcuffs', source)
 end)
